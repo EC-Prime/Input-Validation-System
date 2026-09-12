@@ -42,9 +42,9 @@ public class MainFrame extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        saveBtn = new javax.swing.JButton();
+        exitBtn = new javax.swing.JButton();
+        clearBtn = new javax.swing.JButton();
         illustrationPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -84,14 +84,14 @@ public class MainFrame extends javax.swing.JFrame {
         genderBtn.add(jRadioButton3);
         jRadioButton3.setText("Female");
 
-        jButton1.setText("Save");
-        jButton1.addActionListener(this::jButton1ActionPerformed);
+        saveBtn.setText("Save");
+        saveBtn.addActionListener(this::saveBtnActionPerformed);
 
-        jButton2.setText("Exit");
-        jButton2.addActionListener(this::jButton2ActionPerformed);
+        exitBtn.setText("Exit");
+        exitBtn.addActionListener(this::exitBtnActionPerformed);
 
-        jButton3.setText("Clear");
-        jButton3.addActionListener(this::jButton3ActionPerformed);
+        clearBtn.setText("Clear");
+        clearBtn.addActionListener(this::clearBtnActionPerformed);
 
         javax.swing.GroupLayout illustrationPanelLayout = new javax.swing.GroupLayout(illustrationPanel);
         illustrationPanel.setLayout(illustrationPanelLayout);
@@ -114,11 +114,11 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGap(27, 27, 27)
                         .addGroup(personalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(personalInfoPanelLayout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(saveBtn)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2)
+                                .addComponent(exitBtn)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton3))
+                                .addComponent(clearBtn))
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -180,9 +180,9 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(illustrationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(personalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(saveBtn)
+                    .addComponent(exitBtn)
+                    .addComponent(clearBtn))
                 .addContainerGap(88, Short.MAX_VALUE))
             .addGroup(personalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(personalInfoPanelLayout.createSequentialGroup()
@@ -217,17 +217,17 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmailActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_saveBtnActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_exitBtnActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_clearBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -255,12 +255,11 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton clearBtn;
+    private javax.swing.JButton exitBtn;
     private javax.swing.ButtonGroup genderBtn;
     private javax.swing.JPanel illustrationPanel;
     private javax.swing.JTextField intStudentNum;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -271,6 +270,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JPanel personalInfoPanel;
+    private javax.swing.JButton saveBtn;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFullName;
     // End of variables declaration//GEN-END:variables
