@@ -76,10 +76,3 @@ Alternatively, open the project folder in IntelliJ IDEA / Eclipse / VS Code (wit
 | Contact number | ✔ | digits only | 10 digits | starts with 0 | — |
 | Email address | ✔ | — | — | `name@domain.tld` | — |
 
-## Author
-
-EC — [GitHub: EC-Prime](https://github.com/EC-Prime)
-
-## License
-
-Academic project — Gauteng City College, Advanced Programming II.
