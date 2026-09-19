@@ -73,6 +73,6 @@ Alternatively, open the project folder in IntelliJ IDEA / Eclipse / VS Code (wit
 | ID / Student number | ✔ | digits only | fixed length | — | — |
 | Date of birth / Age | ✔ | numeric (age) | — | valid date | 0–120 |
 | Gender | ✔ | radio selection | — | — | — |
-| Contact number | ✔ | digits only | 10 digits | starts with 0 | — |
+| Contact number | ✔ | digits only | 10 digits |  | — |
 | Email address | ✔ | — | — | `name@domain.tld` | — |
 
