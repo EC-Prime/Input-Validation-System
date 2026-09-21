@@ -412,6 +412,7 @@ public class MainFrame extends javax.swing.JFrame {
     label.setText("OK");
     }
     
+    // Checks name is present and letters only
     private boolean validateName() {
     String value = txtName.getText().trim();
     if (!Validator.isNotEmpty(value)) {
@@ -439,6 +440,7 @@ public class MainFrame extends javax.swing.JFrame {
     clearError(lblSurnameError);
     return true;
 }
+    // Checks student number is present, numeric, and exactly 8 digits
     private boolean validateStudentNum() {
     String value = txtStudentNum.getText().trim();
     if (!Validator.isNotEmpty(value)) {
@@ -458,6 +460,7 @@ public class MainFrame extends javax.swing.JFrame {
     return true;
 }
     
+    // Checks email is present and matches a valid email pattern
     private boolean validateEmail() {
     String value = txtEmail.getText().trim();
     if (!Validator.isNotEmpty(value)) {
@@ -471,7 +474,7 @@ public class MainFrame extends javax.swing.JFrame {
     clearError(lblEmailError);
     return true;
 }
-    
+    // Same shape as validateStudentNum, 10 digits for a cellphone number
     private boolean validateCell() {
     String value = txtCellNo.getText().trim();
     if (!Validator.isNotEmpty(value)) {
@@ -491,6 +494,7 @@ public class MainFrame extends javax.swing.JFrame {
     return true;
 }
     
+    // Checks a date was picked and the resulting age is between 16 and 100
     private boolean validateDob() {
     java.util.Date selected = jDateChooser1.getDate();
     if (selected == null) {
@@ -498,6 +502,7 @@ public class MainFrame extends javax.swing.JFrame {
         return false;
     }
 
+    // Convert to LocalDate so age can be calculated
     java.time.LocalDate dob = selected.toInstant()
         .atZone(java.time.ZoneId.systemDefault())
         .toLocalDate();
@@ -519,7 +524,7 @@ public class MainFrame extends javax.swing.JFrame {
     clearError(lblGenderError);
     return true;
 }
-        
+        // Resets a label to neutral, used by Clear (not valid or invalid, just blank)
         private void resetLabel(javax.swing.JLabel label) {
         label.setForeground(java.awt.Color.BLACK);
         label.setText(" ");
@@ -529,10 +534,12 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtStudentNumActionPerformed
 
+    
     private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmailActionPerformed
 
+    // Runs every field check, using & so all labels update even if one fails
     private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
         // TODO add your handling code here:
         
@@ -543,7 +550,14 @@ public class MainFrame extends javax.swing.JFrame {
           String dobText = new java.text.SimpleDateFormat("dd/MM/yyyy").format(jDateChooser1.getDate());
           
           
-        String gender = radioMale.isSelected() ? "Male" : radioFemale.isSelected() ? "Female" : "Other";
+        String gender;
+        if (radioMale.isSelected()) {
+            gender = "Male";
+        } else if (radioFemale.isSelected()) {
+            gender = "Female";
+        } else {
+            gender = "Other";
+}
         
         
         //Summary of all user's details
@@ -568,6 +582,7 @@ public class MainFrame extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_exitBtnActionPerformed
 
+    // Resets every field, the date picker, gender selection, and comments box
     private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed
         // TODO add your handling code here:
         txtName.setText("");
